@@ -22,6 +22,10 @@ echo "instalando dependencias"
 pip install --upgrade pip
 pip install -r requirements.txt
 
+
+# Crear carpeta de reportes si no existe
+mkdir -p reports
+
 echo "ejecutando pytest"
 python -m pytest test/ --junitxml=reports/test-results.xml --html=reports/test-results.html --self-contained-html
 
